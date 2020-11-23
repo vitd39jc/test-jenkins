@@ -1,21 +1,18 @@
 pipeline {
   agent any
- 
+
   tools {nodejs "node"}
- 
+
   stages {
-    stage('Example') {
+    stage('Nodejs stage') {
       steps {
         sh 'npm config ls'
         sh 'echo start pipeline'
         sh '''
-           cd
-           pwd
-           echo "Multiline shell steps works too"
-           npm i npm@latest -g
-           npm i -g pm2
-           export BUILD_ID=dontKillMePlease
-           pm2 start ecosystem.config.js
+           npm i
+           npm i -g mocha
+           npm run test
+           exit
         '''
       }
     }
