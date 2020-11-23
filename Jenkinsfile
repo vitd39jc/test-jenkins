@@ -12,7 +12,8 @@ pipeline {
            echo "Multiline shell steps works too"
            npm i npm@latest -g
            npm i -g pm2
-           pm2 start server.js
+           export BUILD_ID=dontKillMePlease
+           pm2 start ecosystem.config.js
         '''
       }
     }
