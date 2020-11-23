@@ -13,7 +13,7 @@ pipeline {
            npm i npm@latest -g
            npm i -g pm2
            export BUILD_ID=dontKillMePlease
-           pm2 start ecosystem.config.js --node-args="--harmony-destructuring --harmony_rest_parameters"
+           pm2 start ecosystem.config.js
         '''
       }
     }
