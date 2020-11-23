@@ -9,7 +9,8 @@ pipeline {
         sh 'npm config ls'
         sh 'echo start pipeline'
         sh '''
-           sudo apt-get install sshpass
+           cd
+           pwd
            echo "Multiline shell steps works too"
            npm i npm@latest -g
            npm i -g pm2
