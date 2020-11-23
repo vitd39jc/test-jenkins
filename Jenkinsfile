@@ -13,7 +13,8 @@ pipeline {
            npm i npm@latest -g
            npm i -g pm2
            pm2 start ecosystem.config.js
-           ping http://localhost:1337
+           ps -ef | grep node
+           telnet localhost 1337
         '''
       }
     }
