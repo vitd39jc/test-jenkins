@@ -9,7 +9,6 @@ pipeline {
         sh 'npm config ls'
         sh 'echo start pipeline'
         sh '''
-           fdsfsd
            npm i
            npm i -g mocha
            npm run test
